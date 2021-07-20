@@ -1,0 +1,445 @@
+
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+ \usepackage[spanish]{babel}
+ \usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\selectlanguage{spanish}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+ 
+ \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+ 
+ \newenvironment{ejercicio}[2][Ejercicio]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+%If you want to title your bold things something different just make another thing exactly like this but replace "problem" with the name of the thing you want, like theorem or lemma or whatever
+ 
+
+\makeindex 
+ 
+\begin{document}
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+
+
+ 
+\title{Ejercicios para resolver del libro Bondy and Murty}
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Indicaciones}
+
+\begin{itemize}
+
+\item Hay un aproximado de 160 problemas de distintas dificultades.
+
+\item Las soluciones deben ir en el archivo sol-luis.tex. Copiar el enunciado de cada problema antes de poner la solución.
+Ordenarlo algo parecido a como está en este archivo.
+
+\item El libro es Bondy and Murty, Graph theory, 2008
+
+\item Se tendrán las fechas de entrega
+
+\begin{itemize}
+\item Primera entrega: 15/09/2021
+\item Segunda entrega: 31/12/2021
+\item Primera entrega: 01/05/2021
+\end{itemize}
+
+No hay un orden de entrega ni ejercicios que debe entregar. Simplemente debe ir entregando según como vaya resolviendo. Se recomienda empezar del capítulo 1. Tome en cuenta que en cada capítulo hay ejercicios dificiles, que puede ir dejando para después si no salen o necesita ayuda.
+
+\end{itemize}
+
+\newpage
+
+\section{Graphs (20)}
+
+
+\subsection{Graphs and their representation}
+
+1.1.1,1.1.2,1.1.3,1.1.4,1.1.5,1.1.6,1.1.7,1.1.8,1.1.9,1.1.10,1.1.11,1.1.12,1.1.13,
+1.1.20
+
+\subsection{Isomorphism and automorphism}
+
+1.2.5,1.2.17
+
+\subsection{Graphs arising from other structures}
+
+1.3.1,1.3.7,1.3.8,1.3.12
+
+\subsection{Constructing graphs from another graphs}
+
+1.4.3,1.4.5
+
+\subsection{Directed graphs}
+
+1.5.2,1.5.8
+
+\subsection{Infinite graphs}
+
+$\emptyset$
+
+\newpage
+
+\section{Subgraphs (14)}
+
+\subsection{Subgraphs and Supergraphs}
+
+2.1.2,2.1.3,2.1.4,2.1.5,2.1.13,2.1.17,2.1.21
+
+\subsection{Spanning and Induced Subgraphs}
+
+2.2.2,2.2.13,2.2.23
+
+\subsection{Modifying Graphs}
+$\emptyset$
+
+\subsection{Decompositions and coverings}
+
+2.4.2
+
+\subsection{Edge Cuts and Bonds}
+
+2.5.1,2.5.2,2.5.4
+
+\subsection{Even subgraphs}
+
+$\emptyset$
+
+\subsection{Graph Reconstruction}
+
+$\emptyset$
+
+\newpage
+
+\section{Connected Graphs (13)}
+
+\subsection{Walks and Connection}
+
+3.1.1,3.1.2,3.1.4,3.1.5,3.1.7,3.1.10
+
+\subsection{Cut Edges}
+
+3.2.1,3.2.2
+
+\subsection{Euler Tours}
+3.3.3,3.3.4,3.3.6
+
+\subsection{Connection in Digraphs}
+
+3.4.11,3.4.12
+
+\subsection{Cycle Double Covers}
+
+$\emptyset$
+
+\newpage
+
+\section{Trees (8)}
+
+\subsection{Forests and Trees}
+
+4.1.1,4.1.2,4.1.4,4.1.5,4.1.8,4.1.9,4.1.16,4.1.20
+
+\subsection{Spanning Trees}
+
+4.2.8
+
+\subsection{Fundamental Cycles and Bonds}
+
+$\emptyset$
+
+\newpage
+
+
+\section{Nonseparable Graphs (8)}
+
+\subsection{Cut Vertices}
+
+5.1.1,5.1.2, 5.1.4,5.1.5
+
+
+\subsection{Separations and Blocks}
+
+5.2.1,5.2.2,5.2.6,5.2.8
+
+\subsection{Ear Decompositions}
+
+$\emptyset$
+
+\subsection{Directed Ear Decompositions}
+
+$\emptyset$
+
+\newpage
+
+\section{Tree-Search Algorithms}
+
+$\emptyset$
+
+\section{Flows in Networks}
+
+$\emptyset$
+
+\section{Complexity of Algorithms}
+
+$\emptyset$
+
+\newpage
+
+
+\section{Connectivity (18)}
+
+\subsection{Vertex Connectivity}
+
+9.1.1,9.1.2,9.1.3,9.1.4,9.1.7,9.1.8,9.1.9,,9.1.12,9.1.13
+
+\subsection{The Fan Lemma}
+
+9.2.1,9.2.3,9.2.5
+
+\subsection{Edge Connectivity}
+
+9.3.2,9.3.3,9.3.4,9.3.5,9.3.8
+
+\subsection{Three-Connected Graphs}
+
+$\emptyset$
+
+\subsection{Submodularity}
+
+9.5.4
+
+\subsection{Gomory–Hu Trees}
+
+$\emptyset$
+
+\subsection{Chordal Graphs}
+
+$\emptyset$
+
+\newpage
+
+
+\section{Planar graphs (16)}
+
+
+\subsection{Plane and Planar Graphs}
+
+10.1.1,10.1.2,10.1.3,10.1.4,10.1.5,
+
+\subsection{Duality}
+
+10.2.4,10.2.5,10.2.11
+
+\subsection{Euler's formula}
+
+10.3.1,10.3.2,10.3.3,10.3.4,10.3.8
+
+\subsection{Bridges}
+
+$\emptyset$
+
+\subsection{Kuratowski’s Theorem}
+
+10.5.1,10.5.2,10.5.3
+
+\subsection{Surface Embeddings of Graphs}
+
+
+$\emptyset$
+
+\newpage
+
+\section{The Four-Colour Problem (3)}
+
+\subsection{Colourings of Planar Maps}
+
+11.2.1,11.2.2,11.2.7
+
+\subsection{The Five-Colour Problem}
+
+$\emptyset$
+
+
+\newpage
+
+\section{Stable sets and cliques (9)}
+
+\subsection{Stable Sets}
+
+12.1.2,12.1.3,12.1.4,12.1.7
+
+\subsection{Turán’s Theorem}
+
+12.2.3,12.2.7,12.2.8
+
+\subsection{Ramsey’s Theorem}
+
+12.3.1,12.3.3
+
+
+\subsection{The Regularity Lemma}
+
+$\emptyset$
+
+\newpage
+
+\section{The probabilistic method}
+
+$\emptyset$
+
+\section{Vertex colourings (9)}
+
+\subsection{Chromatic Number}
+
+14.1.2,14.1.3,14.1.4,14.1.5,14.1.7,14.1.9,14.1.10,14.1.12,
+14.1.17,
+
+\subsection{Critical Graphs}
+
+$\emptyset$
+
+\subsection{Girth and Chromatic Number}
+
+$\emptyset$
+
+\subsection{Perfect Graphs}
+
+$\emptyset$
+
+\subsection{List Colourings}
+
+$\emptyset$
+
+\subsection{The Adjacency Polynomial}
+
+$\emptyset$
+
+\subsection{The Chromatic Polynomial}
+
+$\emptyset$
+
+\newpage
+
+\section{Colourings of Maps}
+
+
+$\emptyset$
+
+\section{Matchings (13)}
+
+\subsection{Maximum Matchings}
+
+16.1.3,16.1.5,16.1.7,16.1.9,16.1.2
+
+\subsection{Matchings in Bipartite Graphs}
+
+16.2.1,16.2.2,16.2.6,16.2.7,16.2.13,16.2.16
+
+
+\subsection{Matchings in Arbitrary Graphs}
+
+16.3.1,16.3.2
+
+\subsection{Perfect Matchings and Factors}
+
+$\emptyset$
+
+\subsection{Matching Algorithms}
+
+$\emptyset$
+
+\newpage
+
+\section{Edge Colourings (10)}
+
+\subsection{Edge Chromatic Number}
+
+17.1.1,17.1.2,17.1.3,17.1.6,17.1.10,17.1.11
+
+\subsection{Vizing’s Theorem}
+
+17.2.1,17.2.2,17.2.6,17.2.9
+
+\subsection{Snarks}
+
+$\emptyset$
+
+\subsection{Coverings by Perfect Matchings}
+
+$\emptyset$
+
+\subsection{List edge colourings}
+
+$\emptyset$
+
+
+
+\newpage
+
+\section{Hamilton Cycles (7)}
+
+\subsection{Hamiltonian and Nonhamiltonian Graphs}
+
+18.1.1,18.1.5,18.1.6,18.1.7,18.1.11
+
+\subsection{Nonhamiltonian Planar Graphs}
+
+18.2.3
+
+\subsection{Path and Cycle Exchanges}
+
+18.3.5
+
+\subsection{Path Exchanges and Parity}
+
+$\emptyset$
+
+\subsection{Hamilton Cycles in Random Graphs}
+
+
+
+\newpage
+
+\section{Coverings and Packings in Directed Graphs}
+
+
+$\emptyset$
+
+\section{Electrical Networks}
+
+
+$\emptyset$
+
+\section{Integer Flows and Coverings}
+
+
+$\emptyset$
+
+
+\end{document}
