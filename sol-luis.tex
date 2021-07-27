@@ -1,4 +1,3 @@
-
 \documentclass[12pt]{article}
  \usepackage[margin=1in]{geometry} 
 \usepackage{amsmath,amsthm,amssymb,amsfonts}
@@ -37,20 +36,129 @@
 
 Podemos seguir la siguiente plantilla
 
-\section{Nombre Sección}
+\section{Graphs}
 
-\begin{ejercicio}{NUMERO}
-
-\textbf{Enunciado ejercicio} $x^y$ \textbf{más enunciado}
+\begin{ejercicio}{1.1.1}
 \end{ejercicio}
+Sea $G$ un grafo simple. Pruebe que $m \leq \binom{n}{2}$
+, y determine cuando sucede la igualdad.
+\\\\
+\textbf{Solución.} 
+\\\\
+Se sabe que cada arista està definida por dos vèrtices distintos del grafo. Entonces, como el grafo es simple, la cantidad de aristas que se pueden formar es a lo mucho la cantidad de formas de escoger 2 vèrtices distintos del grafo, cuyo valor es $\binom{n}{2}$. De ahi se sigue que $m \leq \binom{n}{2}$. La igualdad sucede solo cuando el grafo es completo, es decir, existe una arista entre cualesquiera 2 vertices distintos.
+
+\begin{ejercicio}{1.1.2}
+\end{ejercicio}
+Sea $G[X,Y]$ un grafo bipartito, donde $|X| = r$ y $|Y| = s$. 
+\\
+a) Pruebe que $ m  \leq  rs$
+\\
+b) Deduzca que $ m  \leq  \frac{n^2}{4}$
+\\
+c) Describa el grafo bipartito $G$ que satisface la igualdad en la parte b)
+\\\\
+\textbf{Solución.} 
+\\\\
+a) Cada arista del grafo $G$ està determinada unicamente por la eleccion de 1 vèrtice del conjunto $X$ y 1 vertice del conjunto $Y$, por lo que la cantidad de aristas que se pueden formar es a lo mucho $|X||Y|$, cuyo valor es $rs$. El caso de igualdad ocurre siempre y cuando se hayan trazado todas las aristas posibles entre $X$ y $Y$.
+\\\\
+b) Se sabe que, por la desigualdad de la media aritmètica - media geomètrica, $ \sqrt{rs}  \leq  \frac{r+s}{2}$. Como $r+s = n$, se demuestra que $ rs  \leq  \frac{n^2}{4}$. 
+Ademàs, como  $ m  \leq  rs$, se deduce que $ m  \leq  \frac{n^2}{4}$
+\\\\
+c)  Para que ocurra la igualdad en la parte b), debe cumplirse dos igualdades: que $r$ sea igual a $s$ por propiedad de la desigualdad media aritmètica - media geomètrica, y que $m = rs$. Como $r + s = n$, entonces $r = s = \frac{n}{2}$ y $ m = \frac{n^2}{4}$. Por lo tanto, la igualdad se da si y solo si $n = 2k$, $r = s = k$, donde $k$ es un entero positivo y cada vertice del conjunto $X$ esta unido a todos los vertices del conjunto $Y$.
+
+\begin{ejercicio}{1.1.3}
+\end{ejercicio}
+Pruebe que:
+\\
+a) Todo camino es bipartito \\
+b) Un ciclo es bipartito si y solo si su longitud es par \\\\
+\textbf{Solución.} 
+\\\\
+a) Sea $A_1, A_2, \ldots, A_n$ el camino dado de n vèrtices. La coloraciòn que cumple es la siguiente:
+Para el indice $i$, si i es par, se pintara a $A_i$ de color azul, caso contrario, se pintara de rojo.
+Como cada arista del camino esta conformada por 2 vertices de indices consecutivos( distinta paridad), entonces sus coloraciones seran distintas, por lo que cumple la condicion del problema. Por lo tanto el camino es bipartito.
+\\\\
+b) Si $n$ es par, entonces aplicamos la coloraciòn dada en la parte a), la cual cumple la condiciòn ya que los indices de los vertices $A_n$ y $A_1$ tienen distinta paridad y por lo tanto distinta coloracion.
+Ahora, si el ciclo es bipartito, definimos a $X$ y $Y$ como los colores disponibles. Sin perdida de generalidad supongamos que el vertice $A_1$ se pinta del color $X$, entonces, el vertice $A_2$ se pintara de color $Y$ por condicion del problema. Aplicando la misma logica observamos que $A_3$ tiene que pintarse de color $X$, de lo cual se puede observar que los vertices con indice impar se pintan con el color $X$ y los de indice par se pintan de color $Y$. Por lo tanto, como entre $A_n$ y $A_1$ existe una arista, entonces $n$ y 1 tienen distinta paridad, por lo que $n$ es par. Lo cual concluye la demostracion.
+
+\begin{ejercicio}{1.1.4}
+\end{ejercicio}
+Pruebe que, para todo grafo $G$: $\delta(G) \leq d(G) \leq \Delta(G)$ \\\\
+\textbf{Solución.} 
+\\\\
+Sean $d_1 \leq d_2 \leq , \ldots, \leq d_n$ los grados de cada uno de los $n$ vertices del grafo.
+Piden demostrar que $d_1 \leq \frac{d_1 + d_2 + \ldots + d_n}{n}  \leq  d_n$, lo cual equivale a demostrar que $n(d_{1}) \leq \  d_1 + d_2 + \ldots + d_n  \leq  n(d_n)$. Procedemos a demostrar esta desigualdad:
+La 1ra desigualdad es cierta puesto que $ d_1 \leq d_i$, para todo indice $i$, si sumamos para el rango de 1 a $n$, se obtendra que $n(d_{1}) \leq \  d_1 + d_2 + \ldots + d_n$. Respecto a la 2da desigualdad, como $ d_i \leq d_n$, para todo indice $i$, al momento de sumar las desigualdades en el rango de 1 a $n$, se obtendra que   $d_1 + d_2 + \ldots + d_n  \leq  n(d_n)$. Entonces, si juntamos las 2 desigualdades obtenidas, se demostraria la afirmacion.
+
+\begin{ejercicio}{1.1.5}
+\end{ejercicio}
+Para $k = 0, 1, 2$ caracterice los k-regular graphs. \\\\
+\textbf{Solución.} 
+\\\\
+Para $k = 0$, la condiciòn que debe cumplirse es que el grafo $G$ no debe tener ninguna arista.
+Para $k = 1$, el grafo $G$ debe estar conformado por $2n$ vertices $A_1, A_2, \ldots, A_{2n}$ tales que existe una arista si y solo si es entre los vertices $A_i$ y $A_{i+1}$, con $i$ impar.
+Esto se puede demostrar de la siguiente manera: \\
+Sin perdida de generalidad supongamos que hay una arista entre $A_1$ y $A_2$, entonces, como el grado de ambos vertices es 1, estos vertices forman una componente conexa del grafo, por lo que se aislan de los demas vertices. Si se aplica la misma logica para los vertices restantes, se demuestra que el grafo esta compuesto por $n$ componentes conexas de 2 vertices cada uno, que equivale al ejemplo que se explico lineas arriba. \\
+Para $k = 2$. el grafo $G$ debe estar conformado por la union de varios ciclos disjuntos( que no compartan ningun vertice ni arista en comun). Esto se puede demostrar de la siguiente manera:
+Sin perdida de generalidad supongamos que un camino de longitud maxima que parte de $A_1$ es:
+$A_1, A_2, \ldots, A_k$. Como $A_k$ tiene grado 2, debe unirse a algun vertice adicional, como es el ultimo vertice del camino de longitud maxima de $A_1$, entonces $A_k$ debe unirse a algun vertice $A_i$ con $i \leq k-2 $. Si $i>1$, entonces el grado de $A_i$ seria al menos 3 ya que estaria unido con los vertices $A_{i-1}, A_{i+1}, A_k$, lo cual es una contradiccion. Por lo tanto, debe unirse a $A_1$. De esta manera se demuestra que los vertices $A_1, A_2, \ldots, A_k$ forman un ciclo. Ademas, no deben unirse con ningun otro vertice mas ya que el grado aumentaria. Si aplicamos la misma logica para los vertices que aun no se han analizado, concluimos lo dicho lineas arriba.
+
+\begin{ejercicio}{1.1.6}
+\end{ejercicio}
+a) Pruebe que en cualquier grupo de dos o mas personas, siempre existen dos que tienen la misma cantidad de amigos en el grupo.
+\\
+b) Describa los grupos de 5 personas tales que entre cualesquiera 2 existe exactamente 1 amigo en comun. ¿Existira algun grupo de 4 personas con la misma propiedad?
+\\\\
+
 
 \textbf{Solución.} 
+\\\\
+a) Supongamos por contradiccion que existe un grafo $G$ de $n$ vertices $V_0, V_1, \ldots, V_{n-1}$ tal que los grados de cada vertice sean distintos. Se sabe que $0 \leq deg(v)  \leq n-1 $ para todo vertice $v$, de lo cual se concluye que $deg(v)$ puede tomar $n$ valores. Como todos los grados son distintos, entonces para cada vertice $V_i$, $deg(V_i) = i$. Consideremos a los vertices $V_0$ y $V_{n-1}$, como $V_{n-1}$ tiene grado igual a $n-1$, entonces esta unido con todos los demas vertices, en particular con $V_0$. Sin embargo el grado de $V_0$ es 0, lo cual es una contradiccion. Por lo tanto, siempre existen  dos vertices con el mismo grado.
+\\
+b) Vamos a demostrar que el grafo resultante que cumple las condiciones debe tener 1 vertice de grado 4 y 4 vertices adicionales $A, B, C, D$ tales que existe una arista entre los pares $(A,B)$ y $(C,D)$.
+Para ello vamos a suponer por contradiccion que no existe un vertice de grado 4 en el grafo. Sean $X$ y $Y$ dos vertices del grafo con el mismo grado(partiendo de la parte a)). Entonces, por condicion del problema existe un vertice $Z$ tal que hay una arista en $(X,Z)$ y $(Y,Z)$. Ahora existen 2 casos: 
+Si $X$ esta unido a algun vertice mas distinto de $Y$. Sea $L$ tal vertice, ahora, no puede existir una arista entre $L$ y $Y$ ya que $X$ y $Y$ tendrian 2 amigos en comun($L$ y $Z$). Ademas, como $X$ y $Y$ tienen el mismo grado, entonces $Y$ debe estar unido al quinto vertice al que llamaremos $K$. Finalmente, si analizamos entre los vertices $L$ y $K$, deberia existir algun vertice entre $X$, $Y$, $Z$ que este unido a ambos por condicion del problema. Notamos que no puede ser ni $X$ ni $Y$ ya que entre $X$ y $Y$ habrian al menos 2 amigos en comun, por lo tanto $L$ y $K$ deben estar unidos a $Z$, con esto notamos que el grado de $Z$ es 4, lo cual es una contradiccion. El otro caso es que ni $X$ ni $Y$ estan unidos a algun otro vertice. Si analizamos al par $(X,Z)$, debe existir otro vertice que este unido a ambos, lo cual concluye que ese vertice debe ser unicamente $Y$. Entonces entre $X$, $Y$, $Z$ se forma un ciclo. Sean $L$ y $K$ los vertices restantes, como entre $L$ y $K$ debe existir algun vertice que este unido a ambos, y ademas como no puede ser ni $X$ ni $Y$, se concluye que $Z$ debe estar unido a ambos, por lo que el grado de $Z$ seria 4, lo cual una vez mas contradice la afirmacion.
+Por lo tanto, siempre existe un vertice de grado 4.
+Sea $Z$ tal vertice y sean $A, B, C, D$ los 4 vertices restantes. Notamos que cualesquiera 2 vertices distintos de $Z$ tienen un amigo en comun que es $Z$. Ahora, supongamos sin perdida de generalidad que el vertice $A$ tenga grado 3, entonces, como ya esta unido a $Z$, estara unido a 2 vertices mas $P$ y $Q$. Pero esto es una contradiccion ya que entre $P$ y $Q$ habrian 2 amigos en comun($A$ y $Z$).
+Por lo tanto, todo vertice distinto de $Z$ tiene grado a lo mucho 2. Si algun vertice $X$ tuviera grado 1, entonces solo estaria unido a $Z$, y al momento de analizar al par $(X,Z)$, tendria que unirse a algun otro vertice mas por condicion del problema, por lo que todo vertice distinto de $Z$ tiene grado 2, y la unica forma que suceda esto es que esten unidos mediante pares disjuntos, el cual es el ejemplo mostrado al inicio del problema.
+\\
+No existe un grafo de 4 vertices que cumpla la condicion. Sean $X$ y $Y$ dos vertices con el mismo grado. Entonces, por condicion del problema existe un vertice $Z$ que esta unido a ambos.
+Sea $W$ el vertice faltante. Si $X$ esta unido a $W$, entonces, como $X$ y $Y$ tienen el mismo grado, $Y$ tambien debe estar unido a $L$, lo cual seria una contradiccion ya que entre $X$ y $Y$ habrian 2 amigos en comun. Si analizamos entre $X$ y $Z$, debe existir algun vertice que sea amigo de ambos, como no puede ser $W$, entonces debe ser $Y$, asi entre $X$, $Y$, $Z$ se forma un ciclo. Como entre $Z$ y $W$ debe haber un ciclo, entonces alguno de los vertices $X$, $Y$ debe estar unido a $L$, lo cual no es posible por el caso anterior. Por lo tanto, se concluye que no existe un grafo de 4 vertices que cumpla la condicion.
 
-Aca va la solución $\qed$.
+\begin{ejercicio}{1.1.12}
+\end{ejercicio}
+a) Demuestre que si $G$ es simple y $ m > \binom{n-1}{2}$, entonces $G$ es conexo.
+\\
+b) Para $n > 1$, encuentre un grafo $G$ que no sea conexo.
+\\\\
+\textbf{Solución.} 
+\\\\
+a) Sean $x_1, x_2, \ldots, x_n$ los grados de los $n$ vértices. Entonces:
+$x_1 + x_2 + \ldots + x_n = 2m$, lo cual significa que $x_1 + x_2 + \ldots + x_n > (n-1)(n-2) $. Si existe algun vertice con grado $x_i = 0$, entonces se debe cumplir que existe un vértice con grado $x_j > \frac{(n-1)(n-2)}{n-1}$, lo cual significa que $x_j = n-1$, es decir, está conectado a todos los vértices, lo cual hace al grafo conexo. Entonces para este caso ya está demostrado que $G$ es conexo. Ahora, si todos los grados de los vértices son al menos 1, entonces, existe un grado $x_k > \frac{(n-1)(n-2)}{n} = \frac{n^2 - 3n + 2}{n} > n-3 $. Por lo tanto $ x_k \geq n-2 $. Si $x_k = n-1$, el grafo $G$ ya sería conexo ya que ese vértice está unido con todos los otros vértices. Ahora, si $x_k = n-2$, entonces este vértice esta unido con todos los demás, menos con un vértice $v_j$. Como el grado de $v_j$ es al menos 1, entonces está unido con algún vértice que está conectado con el vértice de grado $x_k$, lo cual haría al grafo conexo. Con esto queda concluida la demostración.
+\\\\
+b) Un ejemplo de ello es un grafo $G$ de $n$ vértices con $n-1$ vertices de grado $n-2$ y el vértice restante de grado 0. Es decir, es un grafo completo de $n-1$ vértices mas un vértice de grado 0.
 
-Sientáse libre de encontrar otra plantilla mejor o proponer, siempre y cuando esté ordenado
 
 
+
+
+
+
+
+
+
+
+
+
+
+\begin{ejercicio}{1.1.20}
+\end{ejercicio}
+Sea $S$ un conjunto de $n$ puntos en el plano tales que las distancias entre cualesquiera dos de ellos es al menos 1. Pruebe que existen a lo mucho $3n$ pares de vertices cuya distancia es exactamente 1.
+\\\\
+\textbf{Solución.} 
+\\\\
+Demostraremos que cada vertice $v$ de $S$ tiene a lo mucho otros 6 puntos del conjunto cuya distancia es exactamente 1. Para ello vamos a suponer por contradiccion que existe un vertice $x$ tal que tiene al menos 7 puntos con distancia exactamente 1. Es claro que no existe un par entre ellos que sean colineales con $x$. Por el principio de casillas, existe un par de vertices $a$ y $b$ tales que el angulo $axb$ es a lo mucho $\frac{360}{7}$, cuyo valor es menor a 60 grados. Por ley de cosenos, la distancia entre $a$ y $b$ es menor a 1, lo cual es una contradiccion, lo cual demuestra el lema.
+Ahora, consideremos una arista entre 2 vertices si su distancia es exactamente 1. Hemos demostrado que el grado de cada vertice es a lo mucho 6. Si hacemos una sumatoria de los grados en todos los vertices obtendremos que la cantidad de aristas es a lo mucho $\frac{6n}{2} = 3n$, lo cual demuestra el problema.
 
 
 \end{document}
