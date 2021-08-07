@@ -139,7 +139,17 @@ $x_1 + x_2 + \ldots + x_n = 2m$, lo cual significa que $x_1 + x_2 + \ldots + x_n
 b) Un ejemplo de ello es un grafo $G$ de $n$ vértices con $n-1$ vertices de grado $n-2$ y el vértice restante de grado 0. Es decir, es un grafo completo de $n-1$ vértices mas un vértice de grado 0.
 
 
-
+\begin{ejercicio}{1.1.13}
+\end{ejercicio}
+a) Pruebe que si $G$ es simple y $\delta > \frac{n-2}{2}$, entonces $G$ es conexo. 
+\\
+b) Para $n$ par, encuentre un grafo no conexo y que sea $\frac{n-2}{2}$-regular
+\\\\
+\textbf{Solución.} 
+\\\\
+a) Sean $u$ y $v$ dos vértices cualesquiera del grafo, y sean $C_u$ y $C_v$ el cardinal del conjunto de vértices a los que está unido $u$ y $v$ respectivamente. Por condición del problema, $C_u > \delta$ y $C_v > \delta$. Si sumamos estas 2 ecuaciones obtenemos que $C_u + C_v > 2\delta$, agregandole los vértices iniciales obtenemos que $C_u + C_v + 2 > 2\delta + 2 > n$, de lo cual concluimos que $C_u + C_v +2 > n$. Sin embargo, podemos notar que si existiera algún vértice que esté unido a los vértices $u$ y $v$, entonces existiría un camino entre $u$ y $v$, por lo que este caso ya esta resuelto, el otro caso es que los conjuntos de vértices de $u$ y $v$ sean disjuntos, por lo que $C_u + C_v \leq  n-2$(sin contar a $u$ y $v$), lo cual sería una contradicción por la desigualdad obtenida pasos atras. Por lo tanto $G$ siempre es conexo.
+\\\\
+b) Si $n=2k$, un ejemplo del grafo $G$ podría ser que esté conformado por 2 sub-grafos disjuntos que sean k-cliqué. Esto garantiza que todos los grados sean $k-1$ y que no sea conexo ya que no hay forma de unir 2 vértices de un sub-grafo a otro.
 
 
 
