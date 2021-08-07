@@ -125,6 +125,21 @@ Por lo tanto, todo vertice distinto de $Z$ tiene grado a lo mucho 2. Si algun ve
 No existe un grafo de 4 vertices que cumpla la condicion. Sean $X$ y $Y$ dos vertices con el mismo grado. Entonces, por condicion del problema existe un vertice $Z$ que esta unido a ambos.
 Sea $W$ el vertice faltante. Si $X$ esta unido a $W$, entonces, como $X$ y $Y$ tienen el mismo grado, $Y$ tambien debe estar unido a $L$, lo cual seria una contradiccion ya que entre $X$ y $Y$ habrian 2 amigos en comun. Si analizamos entre $X$ y $Z$, debe existir algun vertice que sea amigo de ambos, como no puede ser $W$, entonces debe ser $Y$, asi entre $X$, $Y$, $Z$ se forma un ciclo. Como entre $Z$ y $W$ debe haber un ciclo, entonces alguno de los vertices $X$, $Y$ debe estar unido a $L$, lo cual no es posible por el caso anterior. Por lo tanto, se concluye que no existe un grafo de 4 vertices que cumpla la condicion.
 
+\begin{ejercicio}{1.1.9}
+\end{ejercicio}
+Sea $G[X,Y]$ un grafo bipartito:
+\\
+a) Pruebe que $\sum_{v \in X}^{}d(v) = \sum_{v \in Y}^{}d(v)$ 
+\\
+b) Demuestre que, si $G$ es k-regular, entonces $\vert X \vert = \vert Y \vert$
+\\\\
+\textbf{Solución.} 
+\\\\
+a) Como cada arista está conformada exactamente por 1 vértice del conjunto $X$ y 1 vértice del conjunto $Y$, entonces se cumple que $\sum_{v \in X}^{}d(v) = m$ y $\sum_{v \in Y}^{}d(v) = m$, por lo que 
+$\sum_{v \in X}^{}d(v) = \sum_{v \in Y}^{}d(v)$
+\\\\
+b) Como es k-regular, entonces $\sum_{v \in X}^{}d(v) = k\vert X \vert = k\vert Y \vert$, por lo que $\vert X \vert = \vert Y \vert$
+
 \begin{ejercicio}{1.1.12}
 \end{ejercicio}
 a) Demuestre que si $G$ es simple y $ m > \binom{n-1}{2}$, entonces $G$ es conexo.
