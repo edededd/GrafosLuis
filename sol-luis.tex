@@ -140,6 +140,15 @@ $\sum_{v \in X}^{}d(v) = \sum_{v \in Y}^{}d(v)$
 \\\\
 b) Como es k-regular, entonces $\sum_{v \in X}^{}d(v) = k\vert X \vert = k\vert Y \vert$, por lo que $\vert X \vert = \vert Y \vert$
 
+\begin{ejercicio}{1.1.10}
+\end{ejercicio}
+Un grafo k-partito es uno cuyos vértices pueden ser particionados en k subconjuntos, de modo que no existe una arista que esté conformada por 2 vértices del mismo conjunto. Sea $G$ un grafo k-partito simple y sean $a_1, a_2, \ldots, a_k$ el cardinal de cada uno de los k subconjuntos mencionados. Demuestre que $m \leq \frac{\sum_{i=1}^{k}a_i(n-a_i)}{2}$
+\\\\
+\textbf{Solución.} 
+\\\\
+Sea $v$ un vértice del conjunto de tamaño $a_1$, entonces, solo puede estar conectado con aristas que no pertenezcan a tal conjunto, por lo tanto, puede estar unido como máximo a $n-a_i$ vértices. Como se cumple para todo vértice de tal conjunto, entonces, la suma de grados de los vértices que pertenecen al conjunto con cardinal $a_i$ es $a_i(n-a_i)$. 
+De forma similar hacemos con los demás conjuntos, al momento de sumar obtenemos que el número de aristas es a lo mucho $\sum_{i=1}^{k}a_i(n-a_i)$, entonces : $2m \leq \sum_{i=1}^{k}a_i(n-a_i)$, lo cual demuestra el problema.
+
 \begin{ejercicio}{1.1.12}
 \end{ejercicio}
 a) Demuestre que si $G$ es simple y $ m > \binom{n-1}{2}$, entonces $G$ es conexo.
