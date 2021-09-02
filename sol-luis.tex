@@ -195,4 +195,191 @@ Demostraremos que cada vertice $v$ de $S$ tiene a lo mucho otros 6 puntos del co
 Ahora, consideremos una arista entre 2 vertices si su distancia es exactamente 1. Hemos demostrado que el grado de cada vertice es a lo mucho 6. Si hacemos una sumatoria de los grados en todos los vertices obtendremos que la cantidad de aristas es a lo mucho $\frac{6n}{2} = 3n$, lo cual demuestra el problema.
 
 
+\begin{ejercicio}{2.1.5}
+\end{ejercicio}
+Pruebe que los tres grafos de Petersen son isomorfos:
+\\\\
+\textbf{Solución.} 
+\\\\
+A continuaciòn se mostraràn los grafos con los vèrtices enumerados, donde 2 vertices con el mismo numero indican una correspondencia entre tales vertices de los grafos.
+\begin{center}
+\begin{tikzpicture}
+  %-- nodos, template de elizabeth xd
+  \node (1) [draw,circle,inner sep=2pt,fill] at (0,0) {};
+  \node (ta) [font=\fontsize{11}{0}\selectfont] at (0,0.3) {1};
+  
+  \node (2) [draw,circle,inner sep=2pt,fill] at (-2,-2) {};
+  \node (tb) [font=\fontsize{11}{0}\selectfont] at (-2,-2.3) {2};
+  
+  \node (3) [draw,circle,inner sep=2pt,fill] at (2,-2) {};
+  \node (tc) [font=\fontsize{11}{0}\selectfont] at (2,-2.3) {3};
+  
+  \node (4) [draw,circle,inner sep=2pt,fill] at (0,-1) {};
+  \node (td) [font=\fontsize{11}{0}\selectfont] at (0,-0.7) {4};
+  
+  \node (5) [draw,circle,inner sep=2pt,fill] at (1,-4) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (1,-4.3) {5};
+  
+   \node (6) [draw,circle,inner sep=2pt,fill] at (1,-2) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (1,-2.3) {6};
+  
+   \node (7) [draw,circle,inner sep=2pt,fill] at (-1,-4) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (-1,-4.3) {7};
+  
+   \node (8) [draw,circle,inner sep=2pt,fill] at (-0.5,-3) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (-0.5,-3.3) {8};
+  
+   \node (9) [draw,circle,inner sep=2pt,fill] at (0.5,-3) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (0.5,-3.3) {9};
+  
+   \node (10) [draw,circle,inner sep=2pt,fill] at (-1,-2) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (-1,-2.3) {10};
+ 
+  
+  \draw[ thick] (1) to (2);
+  \draw[ thick] (1) to (3);
+  \draw[ thick] (1) to (4);
+  \draw[ thick] (2) to (7);
+  \draw[ thick] (2) to (10);
+  \draw[ thick] (3) to (5);
+  \draw[ thick] (3) to (6);
+  \draw[ thick] (4) to (8);
+  \draw[ thick] (4) to (9);
+  \draw[ thick] (5) to (7);
+  \draw[ thick] (5) to (9);
+  \draw[ thick] (6) to (10);
+  \draw[ thick] (6) to (8);
+  \draw[ thick] (7) to (8);
+  \draw[ thick] (9) to (10);
+ 
+\end{tikzpicture}
+\end{center}
+
+
+
+
+
+\begin{center}
+\begin{tikzpicture}
+  %-- nodos, template de elizabeth xd
+  \node (1) [draw,circle,inner sep=2pt,fill] at (0,-2) {};
+  \node (ta) [font=\fontsize{11}{0}\selectfont] at (0,-2.3) {1};
+  
+  \node (2) [draw,circle,inner sep=2pt,fill] at (-1,-3) {};
+  \node (tb) [font=\fontsize{11}{0}\selectfont] at (-1,-3.3) {2};
+  
+  \node (3) [draw,circle,inner sep=2pt,fill] at (0,-1) {};
+  \node (tc) [font=\fontsize{11}{0}\selectfont] at (0,-0.7) {3};
+  
+  \node (4) [draw,circle,inner sep=2pt,fill] at (1,-3) {};
+  \node (td) [font=\fontsize{11}{0}\selectfont] at (1,-3.3) {4};
+  
+  \node (5) [draw,circle,inner sep=2pt,fill] at (-2,-2) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (-2,-2.3) {5};
+  
+   \node (6) [draw,circle,inner sep=2pt,fill] at (2,-2) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (2,-2.3) {6};
+  
+   \node (7) [draw,circle,inner sep=2pt,fill] at (-1,0) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (-1,0.3) {7};
+  
+   \node (8) [draw,circle,inner sep=2pt,fill] at (1,0) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (1,0.3) {8};
+  
+   \node (9) [draw,circle,inner sep=2pt,fill] at (-1,-4) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (-1,-4.3) {9};
+  
+   \node (10) [draw,circle,inner sep=2pt,fill] at (1,-4) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (1,-4.3) {10};
+ 
+  
+  \draw[ thick] (1) to (2);
+  \draw[ thick] (1) to (3);
+  \draw[ thick] (1) to (4);
+  \draw[ thick] (2) to (7);
+  \draw[ thick] (2) to (10);
+  \draw[ thick] (3) to (5);
+  \draw[ thick] (3) to (6);
+  \draw[ thick] (4) to (8);
+  \draw[ thick] (4) to (9);
+  \draw[ thick] (5) to (7);
+  \draw[ thick] (5) to (9);
+  \draw[ thick] (6) to (10);
+  \draw[ thick] (6) to (8);
+  \draw[ thick] (7) to (8);
+  \draw[ thick] (9) to (10);
+ 
+ 
+ 
+ 
+ 
+  
+
+\end{tikzpicture}
+\end{center}
+
+
+\begin{center}
+\begin{tikzpicture}
+  %-- nodos, template de elizabeth xd
+  \node (1) [draw,circle,inner sep=2pt,fill] at (0,-2.5) {};
+  \node (ta) [font=\fontsize{11}{0}\selectfont] at (0,-2.76) {1};
+  
+  \node (2) [draw,circle,inner sep=2pt,fill] at (-1.5,-3) {};
+  \node (tb) [font=\fontsize{11}{0}\selectfont] at (-1.5,-3.3) {2};
+  
+  \node (3) [draw,circle,inner sep=2pt,fill] at (0,0) {};
+  \node (tc) [font=\fontsize{11}{0}\selectfont] at (0,0.3) {3};
+  
+  \node (4) [draw,circle,inner sep=2pt,fill] at (1.5,-3) {};
+  \node (td) [font=\fontsize{11}{0}\selectfont] at (1.5,-3.3) {4};
+  
+  \node (5) [draw,circle,inner sep=2pt,fill] at (-1,0) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (-1,0.3) {5};
+  
+   \node (6) [draw,circle,inner sep=2pt,fill] at (1,0) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (1,0.3) {6};
+  
+   \node (7) [draw,circle,inner sep=2pt,fill] at (-1.5,-1) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (-1.5,-1.3) {7};
+  
+   \node (8) [draw,circle,inner sep=2pt,fill] at (1.5,-1) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (1.5,-1.3) {8};
+  
+   \node (9) [draw,circle,inner sep=2pt,fill] at (1,-4) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (1,-4.3) {9};
+  
+   \node (10) [draw,circle,inner sep=2pt,fill] at (-1,-4) {};
+  \node (te) [font=\fontsize{11}{0}\selectfont] at (-1,-4.3) {10};
+ 
+  
+  \draw[ thick] (1) to (2);
+  \draw[ thick] (1) to (3);
+  \draw[ thick] (1) to (4);
+  \draw[ thick] (2) to (7);
+  \draw[ thick] (2) to (10);
+  \draw[ thick] (3) to (5);
+  \draw[ thick] (3) to (6);
+  \draw[ thick] (4) to (8);
+  \draw[ thick] (4) to (9);
+  \draw[ thick] (5) to (7);
+  \draw[ thick] (5) to (9);
+  \draw[ thick] (6) to (10);
+  \draw[ thick] (6) to (8);
+  \draw[ thick] (7) to (8);
+  \draw[ thick] (9) to (10);
+ 
+ 
+ 
+ 
+ 
+  
+
+\end{tikzpicture}
+\end{center}
+
+
+
+
+
 \end{document}
